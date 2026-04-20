@@ -1,3 +1,8 @@
+// 渲染模块
+// 负责图形渲染
+// 给主程序提供绘制函数，主程序每帧调用一次
+// 从物理模块中获取粒子状态并绘制
+
 #include "graphics.h"
 #include <iostream>
 
@@ -203,30 +208,3 @@ void generateSphereMesh(float radius, int sectorCount, int stackCount) {
     glBindVertexArray(0);
 }
 
-
-
-
-
-
-// =========================================================
-// 清理所有分配的资源
-// =========================================================
-void cleanup() {
-    // 逆序释放资源是个好习惯
-    ImGui_ImplOpenGL3_Shutdown();
-    ImGui_ImplGlfw_Shutdown();
-    ImGui::DestroyContext();
-
-    glDeleteProgram(gShaderProgram);
-    glDeleteVertexArrays(1, &gBallVAO);
-    glDeleteBuffers(1, &gBallVBO);
-    glDeleteBuffers(1, &gBallEBO);
-
-    if (gScene) gScene->release();
-    if (gPhysics) gPhysics->release();
-    if (gPvd) gPvd->release();
-    if (gFoundation) gFoundation->release();
-
-    glfwDestroyWindow(gWindow);
-    glfwTerminate();
-}

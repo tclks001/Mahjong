@@ -1,3 +1,9 @@
+// 物理模块
+// 负责物理计算
+// 给主程序（即UI程序）提供设置重力方向接口和调用update(dt)接口
+// 给渲染程序提供获取粒子位置指针数组std::vector<glm::vec3>接口
+// 直接对粒子使用数组结构体实现更加紧凑的内存布局
+
 #include "physics.h"
 
 using namespace glm;

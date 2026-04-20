@@ -11,7 +11,6 @@
 #include <glm/gtx/vector_angle.hpp>
 
 #include "physics.h"
-#include "ui.h"
 
 
 // 窗口与渲染
@@ -43,4 +42,3 @@ void renderBall();
 GLuint compileShaders();
 // 工具函数：生成一个圆滑的球体网格数据
 void generateSphereMesh(float radius, int sectorCount, int stackCount);
-void cleanup();
