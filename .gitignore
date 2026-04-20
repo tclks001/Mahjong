@@ -1,0 +1,11 @@
+.vs/
+Mahjong/
+packages/
+x64/
+im*
+stb_image.h
+Mahjong.sln
+Mahjong.vcxproj
+Mahjong.vcxproj.filters
+Mahjong.vcxproj.user
+packages.config
