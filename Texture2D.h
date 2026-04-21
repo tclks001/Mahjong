@@ -2,7 +2,6 @@
 #include <GL/glew.h>
 #include <iostream>
 // stb_image
-
  #include "stb_image.h"
 
 class Texture2D {
