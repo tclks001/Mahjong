@@ -22,11 +22,8 @@ inline float physicsTimeStep = 1.0f / 60.0f;
 inline glm::quat gObjectOrientation = glm::quat(1.0f, 0.0f, 0.0f, 0.0f);
 
 // 旋转控制器交互状态
-//inline float gPitch = 0.0f;   // 俯仰角 (绕X轴)
-//inline float gYaw   = 0.0f;   // 偏航角 (绕Y轴)
-//inline float gRoll  = 0.0f;   // 滚转角 (绕Z轴)
 constexpr inline float particleMaxSpeed = 2.4f;
-constexpr inline int particleCount = 500;
+constexpr inline int particleCount = 100;
 
 constexpr inline float containerWidth = 3.6f;
 constexpr inline float containerHeight = 6.0f;
@@ -48,10 +45,7 @@ constexpr int indiceCount = widthIndice * heightIndice * depthIndice;
 const float halfX = containerWidth * 0.5f;
 const float halfY = containerDepth * 0.5f;
 const float halfZ = containerHeight * 0.5f;
-//const int numParticles = particleCount;
 
 
 void initPhysX();
 void updatePhysics(float timeStep);
-//glm::vec3 computeEffectiveGravity(const float gMagnitude = 9.8f);
-//void updatePhysics(float dt);
